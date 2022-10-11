@@ -1,0 +1,14 @@
+.box
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1px;
+}
+
+button
+{
+    font-size: 3px;
+}
