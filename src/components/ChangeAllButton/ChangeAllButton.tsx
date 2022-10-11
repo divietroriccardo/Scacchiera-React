@@ -1,9 +1,7 @@
-import { FunctionComponent, useState } from 'react';
-import Box from 'components/Box/Box';
+import { FunctionComponent } from 'react';
 
 const ChangeAllButton: FunctionComponent = () =>
 {
-
     const refresh = () =>{
         window.location.reload()
     }
