@@ -3,13 +3,9 @@ import "components/Box/Box.css"
 
 const Box: FunctionComponent = () =>
 {
-    const [firstColor, setFirstColor] = useState<string>("")
-    const [secondColor, setSecondColor] = useState<string>("")
-    const [thirdColor, setThirdColor] = useState<string>("")
+    const [color, setColor] = useState<string>("")
 
-    const firstDiv = useRef<HTMLDivElement>(null)
-    const secondDiv = useRef<HTMLDivElement>(null)
-    const thirdDiv = useRef<HTMLDivElement>(null)
+    const div = useRef<HTMLDivElement>(null)
 
     function randomColor(): string
     {
@@ -18,34 +14,16 @@ const Box: FunctionComponent = () =>
 
     useEffect(() => 
         {
-            if (firstDiv.current != null)
+            if (div.current != null)
             {
-                firstDiv.current.style.backgroundColor = randomColor()
+                div.current.style.backgroundColor = randomColor()
             }
-        },[firstColor]
-    )
-
-    useEffect(() => 
-        {
-            if (secondDiv.current != null)
-            {
-                secondDiv.current.style.backgroundColor = randomColor()
-            }
-        },[secondColor]
-    )
-
-    useEffect(() => 
-        {
-            if (thirdDiv.current != null)
-            {
-                thirdDiv.current.style.backgroundColor = randomColor()
-            }
-        },[thirdColor]
+        },[color]
     )
 
     return (
-        <div className="box" ref={firstDiv}>
-            <button onClick={() => setFirstColor(randomColor())}>Cambia colore</button>
+        <div className="box" ref={div}>
+            <button onClick={() => setColor(randomColor())}>Cambia colore</button>
         </div>
     )
 
