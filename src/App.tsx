@@ -1,30 +1,33 @@
 import React, { FunctionComponent } from 'react';
 import 'App.css';
+
 import Box from 'components/Box/Box'
+import ChangeAllButton from 'components/ChangeAllButton/ChangeAllButton';
 
 const App: FunctionComponent = () => 
 {
-  return (<>
-    <div className="app">
-      <div>
-        <Box />
-        <Box />
-        <Box />
+  return (
+    <>
+      <div className="app">
+        <div>
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        <div>
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        <div>
+          <Box />
+          <Box />
+          <Box />
+        </div>
       </div>
-      <div>
-        <Box />
-        <Box />
-        <Box />
-      </div>
-      <div>
-        <Box />
-        <Box />
-        <Box />
-      </div>
-    </div>
+
+      <ChangeAllButton />
     </>
   )
-
 }
-
 export default App;
