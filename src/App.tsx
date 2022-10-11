@@ -26,7 +26,9 @@ const App: FunctionComponent = () =>
         </div>
       </div>
 
-      <ChangeAllButton />
+      <div className="button">
+        <ChangeAllButton />
+      </div>
     </>
   )
 }
